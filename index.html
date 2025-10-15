@@ -21,8 +21,8 @@
             --success: #10b981;
             --warning: #f59e0b;
             --error: #ef4444;
-            --sidebar-width: 280px;
-            --header-height: 70px;
+            --sidebar-width: 300px;
+            --header-height: 80px;
             --border-radius: 12px;
             --border-radius-lg: 16px;
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -48,7 +48,7 @@
         .container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 0 1.5rem;
+            padding: 0 2rem;
         }
 
         /* Header */
@@ -79,7 +79,7 @@
         }
 
         .logo i {
-            font-size: 2rem;
+            font-size: 2.5rem;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -93,7 +93,7 @@
         }
 
         h1 {
-            font-size: 1.8rem;
+            font-size: 2rem;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -102,7 +102,7 @@
 
         .header-actions {
             display: flex;
-            gap: 1rem;
+            gap: 1.5rem;
             align-items: center;
         }
 
@@ -110,8 +110,8 @@
             background: var(--dark-light);
             border: 1px solid rgba(255, 255, 255, 0.1);
             color: var(--light);
-            width: 40px;
-            height: 40px;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -128,12 +128,12 @@
         .user-section {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 1rem;
         }
 
         .user-avatar {
-            width: 40px;
-            height: 40px;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             display: flex;
@@ -142,6 +142,11 @@
             color: white;
             font-weight: 600;
             cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .user-avatar:hover {
+            transform: scale(1.05);
         }
 
         /* Main Layout */
@@ -155,7 +160,7 @@
             width: var(--sidebar-width);
             background: rgba(30, 41, 59, 0.85);
             backdrop-filter: blur(10px);
-            padding: 2rem 1.5rem;
+            padding: 2.5rem 2rem;
             border-right: 1px solid rgba(255, 255, 255, 0.1);
             overflow-y: auto;
             position: sticky;
@@ -163,7 +168,7 @@
             height: calc(100vh - var(--header-height));
             display: flex;
             flex-direction: column;
-            gap: 2rem;
+            gap: 2.5rem;
         }
 
         .sidebar-section {
@@ -171,25 +176,25 @@
         }
 
         .sidebar-title {
-            font-size: 1rem;
+            font-size: 1.1rem;
             text-transform: uppercase;
             letter-spacing: 1px;
             color: var(--gray);
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.75rem;
             font-weight: 600;
         }
 
         .categories {
             display: flex;
             flex-direction: column;
-            gap: 0.5rem;
+            gap: 0.75rem;
         }
 
         .category-btn {
-            padding: 0.8rem 1rem;
+            padding: 1rem 1.25rem;
             border-radius: var(--border-radius);
             background: transparent;
             border: none;
@@ -199,8 +204,8 @@
             transition: var(--transition);
             display: flex;
             align-items: center;
-            gap: 0.7rem;
-            font-size: 0.95rem;
+            gap: 0.75rem;
+            font-size: 1rem;
             position: relative;
             overflow: hidden;
         }
@@ -227,22 +232,22 @@
         }
 
         .category-btn i {
-            width: 20px;
+            width: 22px;
             text-align: center;
         }
 
         .tag-filters {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
+            gap: 0.75rem;
         }
 
         .tag-filter {
             background: rgba(99, 102, 241, 0.1);
             color: var(--primary-light);
-            padding: 0.4rem 0.8rem;
+            padding: 0.5rem 1rem;
             border-radius: 50px;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             cursor: pointer;
             transition: var(--transition);
             border: 1px solid transparent;
@@ -258,23 +263,23 @@
         /* Main Content */
         .main-content {
             flex: 1;
-            padding: 2rem;
+            padding: 2.5rem;
             overflow-y: auto;
             display: flex;
             flex-direction: column;
-            gap: 2rem;
+            gap: 2.5rem;
         }
 
         .stats-cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
         }
 
         .stat-card {
             background: rgba(30, 41, 59, 0.7);
             border-radius: var(--border-radius-lg);
-            padding: 1.5rem;
+            padding: 2rem;
             text-align: center;
             transition: var(--transition);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -301,22 +306,22 @@
         }
 
         .stat-icon {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         .stat-value {
-            font-size: 1.8rem;
+            font-size: 2.2rem;
             font-weight: 700;
-            margin-bottom: 0.2rem;
+            margin-bottom: 0.5rem;
         }
 
         .stat-label {
             color: var(--gray);
-            font-size: 0.9rem;
+            font-size: 1rem;
         }
 
         .search-container {
@@ -325,13 +330,13 @@
 
         .search-box {
             width: 100%;
-            padding: 1rem 1.5rem;
+            padding: 1.25rem 1.75rem;
             border-radius: var(--border-radius-lg);
             border: none;
             background: rgba(30, 41, 59, 0.8);
             backdrop-filter: blur(10px);
             color: var(--light);
-            font-size: 1rem;
+            font-size: 1.1rem;
             border: 1px solid rgba(255, 255, 255, 0.1);
             box-shadow: var(--shadow-light);
             transition: var(--transition);
@@ -345,13 +350,13 @@
 
         .search-btn {
             position: absolute;
-            right: 10px;
-            top: 10px;
+            right: 12px;
+            top: 12px;
             background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             border: none;
             color: white;
-            width: 40px;
-            height: 40px;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
             cursor: pointer;
             transition: var(--transition);
@@ -367,9 +372,9 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 1rem;
+            gap: 1.5rem;
             background: rgba(30, 41, 59, 0.7);
-            padding: 1rem 1.5rem;
+            padding: 1.5rem 2rem;
             border-radius: var(--border-radius-lg);
             border: 1px solid rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
@@ -377,7 +382,7 @@
 
         .sort-options {
             display: flex;
-            gap: 1rem;
+            gap: 1.5rem;
             align-items: center;
         }
 
@@ -385,10 +390,11 @@
             background: rgba(30, 41, 59, 0.8);
             border: 1px solid rgba(255, 255, 255, 0.1);
             color: var(--light);
-            padding: 0.5rem 1rem;
+            padding: 0.75rem 1.25rem;
             border-radius: var(--border-radius);
             cursor: pointer;
             transition: var(--transition);
+            font-size: 1rem;
         }
 
         .sort-select:focus {
@@ -400,16 +406,17 @@
             display: flex;
             background: rgba(30, 41, 59, 0.8);
             border-radius: var(--border-radius);
-            padding: 0.3rem;
+            padding: 0.5rem;
             border: 1px solid rgba(255, 255, 255, 0.1);
+            gap: 0.25rem;
         }
 
         .view-btn {
             background: transparent;
             border: none;
             color: var(--gray);
-            width: 36px;
-            height: 36px;
+            width: 42px;
+            height: 42px;
             border-radius: 8px;
             display: flex;
             align-items: center;
@@ -425,26 +432,26 @@
 
         .resources-count {
             color: var(--gray);
-            font-size: 0.9rem;
+            font-size: 1rem;
             font-weight: 500;
         }
 
         .resources-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 2.5rem;
         }
 
         .resources-list {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: 1.5rem;
         }
 
         .resource-card {
             background: rgba(30, 41, 59, 0.7);
             border-radius: var(--border-radius-lg);
-            padding: 1.5rem;
+            padding: 2rem;
             transition: var(--transition);
             border: 1px solid rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
@@ -472,7 +479,7 @@
         .resource-card.list-view {
             display: flex;
             align-items: center;
-            gap: 1.5rem;
+            gap: 2rem;
         }
 
         .resource-card.list-view .resource-icon {
@@ -489,57 +496,58 @@
         }
 
         .resource-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         .resource-title {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.75rem;
             font-weight: 600;
         }
 
         .resource-description {
             color: var(--gray);
             margin-bottom: 1.5rem;
-            line-height: 1.5;
+            line-height: 1.7;
+            font-size: 1.05rem;
         }
 
         .resource-meta {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
             color: var(--gray);
         }
 
         .resource-category {
             background: rgba(99, 102, 241, 0.2);
             color: var(--primary-light);
-            padding: 0.3rem 0.7rem;
+            padding: 0.5rem 1rem;
             border-radius: 50px;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             font-weight: 500;
         }
 
         .resource-actions {
             display: flex;
-            gap: 0.5rem;
+            gap: 0.75rem;
         }
 
         .action-btn {
             background: rgba(255, 255, 255, 0.1);
             border: none;
             color: var(--light);
-            width: 36px;
-            height: 36px;
+            width: 42px;
+            height: 42px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -555,14 +563,14 @@
 
         .resource-link {
             display: inline-block;
-            padding: 0.7rem 1.5rem;
+            padding: 0.9rem 1.75rem;
             background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             color: white;
             text-decoration: none;
             border-radius: 50px;
             font-weight: 600;
             transition: var(--transition);
-            font-size: 0.9rem;
+            font-size: 1rem;
             border: none;
             cursor: pointer;
             box-shadow: 0 4px 6px rgba(99, 102, 241, 0.3);
@@ -576,16 +584,16 @@
         .resource-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
         }
 
         .tag {
             background: rgba(99, 102, 241, 0.2);
             color: #a5b4fc;
-            padding: 0.3rem 0.7rem;
+            padding: 0.5rem 1rem;
             border-radius: 50px;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             transition: var(--transition);
             cursor: pointer;
             font-weight: 500;
@@ -608,25 +616,40 @@
         .no-results {
             text-align: center;
             grid-column: 1 / -1;
-            padding: 3rem;
+            padding: 4rem;
             color: var(--gray);
+        }
+
+        .no-results i {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.5;
+        }
+
+        .no-results h3 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .no-results p {
+            font-size: 1.1rem;
         }
 
         .loading {
             text-align: center;
-            padding: 2rem;
+            padding: 3rem;
             color: var(--gray);
         }
 
         .loading-spinner {
             display: inline-block;
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 50px;
             border: 4px solid rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             border-top-color: var(--primary);
             animation: spin 1s ease-in-out infinite;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
 
         @keyframes spin {
@@ -641,12 +664,12 @@
             backdrop-filter: blur(10px);
             display: flex;
             flex-direction: column;
-            height: 500px;
+            height: 550px;
             box-shadow: var(--shadow-card);
         }
 
         .chat-header {
-            padding: 1rem 1.5rem;
+            padding: 1.5rem 2rem;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             display: flex;
             justify-content: space-between;
@@ -654,24 +677,24 @@
         }
 
         .chat-title {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: 600;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.75rem;
         }
 
         .chat-messages {
             flex: 1;
-            padding: 1rem 1.5rem;
+            padding: 1.5rem 2rem;
             overflow-y: auto;
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: 1.5rem;
         }
 
         .message {
-            padding: 0.8rem 1rem;
+            padding: 1rem 1.25rem;
             border-radius: var(--border-radius);
             max-width: 80%;
             position: relative;
@@ -697,36 +720,37 @@
 
         .message-sender {
             font-weight: 600;
-            margin-bottom: 0.3rem;
-            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
         }
 
         .message-text {
-            line-height: 1.4;
+            line-height: 1.5;
+            font-size: 1.05rem;
         }
 
         .message-time {
-            font-size: 0.7rem;
+            font-size: 0.8rem;
             color: var(--gray);
             text-align: right;
-            margin-top: 0.3rem;
+            margin-top: 0.5rem;
         }
 
         .chat-input-container {
-            padding: 1rem 1.5rem;
+            padding: 1.5rem 2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             display: flex;
-            gap: 0.5rem;
+            gap: 0.75rem;
         }
 
         .chat-input {
             flex: 1;
-            padding: 0.8rem 1rem;
+            padding: 1rem 1.25rem;
             border-radius: var(--border-radius);
             border: 1px solid rgba(255, 255, 255, 0.1);
             background: rgba(30, 41, 59, 0.8);
             color: var(--light);
-            font-size: 0.9rem;
+            font-size: 1rem;
             transition: var(--transition);
         }
 
@@ -739,8 +763,8 @@
             background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             border: none;
             color: white;
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -766,14 +790,14 @@
             z-index: 2000;
             align-items: center;
             justify-content: center;
-            padding: 1rem;
+            padding: 2rem;
         }
 
         .modal-content {
             background: var(--dark-light);
             border-radius: var(--border-radius-lg);
             width: 100%;
-            max-width: 500px;
+            max-width: 550px;
             max-height: 90vh;
             overflow-y: auto;
             box-shadow: var(--shadow);
@@ -788,7 +812,7 @@
         }
 
         .modal-header {
-            padding: 1.5rem;
+            padding: 2rem;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             display: flex;
             justify-content: space-between;
@@ -796,7 +820,7 @@
         }
 
         .modal-title {
-            font-size: 1.5rem;
+            font-size: 1.7rem;
             font-weight: 600;
         }
 
@@ -804,7 +828,7 @@
             background: transparent;
             border: none;
             color: var(--gray);
-            font-size: 1.5rem;
+            font-size: 1.7rem;
             cursor: pointer;
             transition: var(--transition);
         }
@@ -814,27 +838,28 @@
         }
 
         .modal-body {
-            padding: 1.5rem;
+            padding: 2rem;
         }
 
         .form-group {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.75rem;
         }
 
         .form-label {
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
             font-weight: 500;
+            font-size: 1.1rem;
         }
 
         .form-input, .form-textarea, .form-select {
             width: 100%;
-            padding: 0.8rem 1rem;
+            padding: 1rem 1.25rem;
             border-radius: var(--border-radius);
             border: 1px solid rgba(255, 255, 255, 0.1);
             background: rgba(30, 41, 59, 0.8);
             color: var(--light);
-            font-size: 1rem;
+            font-size: 1.05rem;
             transition: var(--transition);
         }
 
@@ -845,25 +870,25 @@
         }
 
         .form-textarea {
-            min-height: 120px;
+            min-height: 140px;
             resize: vertical;
         }
 
         .form-actions {
             display: flex;
             justify-content: flex-end;
-            gap: 1rem;
-            margin-top: 1.5rem;
+            gap: 1.25rem;
+            margin-top: 2rem;
         }
 
         .btn {
-            padding: 0.8rem 1.5rem;
+            padding: 1rem 1.75rem;
             border-radius: var(--border-radius);
             font-weight: 600;
             cursor: pointer;
             transition: var(--transition);
             border: none;
-            font-size: 0.9rem;
+            font-size: 1rem;
         }
 
         .btn-primary {
@@ -889,12 +914,12 @@
         .auth-tabs {
             display: flex;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
 
         .auth-tab {
             flex: 1;
-            padding: 1rem;
+            padding: 1.25rem;
             text-align: center;
             background: transparent;
             border: none;
@@ -903,6 +928,7 @@
             cursor: pointer;
             transition: var(--transition);
             border-bottom: 2px solid transparent;
+            font-size: 1.05rem;
         }
 
         .auth-tab.active {
@@ -921,16 +947,16 @@
         /* Toast */
         .toast {
             position: fixed;
-            bottom: 2rem;
-            right: 2rem;
+            bottom: 2.5rem;
+            right: 2.5rem;
             background: var(--dark-light);
             color: var(--light);
-            padding: 1rem 1.5rem;
+            padding: 1.25rem 1.75rem;
             border-radius: var(--border-radius);
             box-shadow: var(--shadow);
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 1.25rem;
             z-index: 3000;
             transform: translateY(100px);
             opacity: 0;
@@ -945,7 +971,7 @@
         }
 
         .toast-icon {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             color: var(--primary);
         }
 
@@ -953,7 +979,7 @@
         footer {
             text-align: center;
             margin-top: 4rem;
-            padding: 2rem 0;
+            padding: 2.5rem 0;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: var(--gray);
         }
@@ -963,15 +989,16 @@
             display: flex;
             background: rgba(30, 41, 59, 0.7);
             border-radius: var(--border-radius-lg);
-            padding: 0.5rem;
+            padding: 0.75rem;
             border: 1px solid rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            gap: 0.5rem;
         }
 
         .content-tab {
             flex: 1;
-            padding: 0.8rem 1rem;
+            padding: 1rem 1.25rem;
             text-align: center;
             background: transparent;
             border: none;
@@ -980,6 +1007,7 @@
             cursor: pointer;
             transition: var(--transition);
             border-radius: var(--border-radius);
+            font-size: 1.05rem;
         }
 
         .content-tab.active {
@@ -996,6 +1024,12 @@
         }
 
         /* Responsive */
+        @media (max-width: 1200px) {
+            .resources-grid {
+                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            }
+        }
+
         @media (max-width: 1024px) {
             .main-layout {
                 flex-direction: column;
@@ -1005,7 +1039,7 @@
                 width: 100%;
                 height: auto;
                 position: static;
-                padding: 1.5rem;
+                padding: 2rem;
             }
             
             .categories {
@@ -1015,7 +1049,7 @@
             
             .category-btn {
                 flex: 1;
-                min-width: 150px;
+                min-width: 180px;
                 justify-content: center;
             }
         }
@@ -1036,17 +1070,25 @@
             
             .header-content {
                 flex-direction: column;
-                gap: 1rem;
-                padding: 1rem 0;
+                gap: 1.5rem;
+                padding: 1.5rem 0;
                 height: auto;
             }
             
             h1 {
-                font-size: 1.5rem;
+                font-size: 1.7rem;
             }
 
             .message {
                 max-width: 90%;
+            }
+
+            .container {
+                padding: 0 1.5rem;
+            }
+
+            .main-content {
+                padding: 2rem;
             }
         }
 
@@ -1066,6 +1108,10 @@
 
             .modal-content {
                 margin: 1rem;
+            }
+
+            .sidebar {
+                padding: 1.5rem;
             }
         }
 
@@ -1345,51 +1391,6 @@
         </div>
     </div>
 
-    <!-- Add Resource Modal -->
-    <div class="modal" id="addResourceModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title">Добавить новый ресурс</h2>
-                <button class="modal-close" id="closeModalBtn">&times;</button>
-            </div>
-            <div class="modal-body">
-                <form id="addResourceForm">
-                    <div class="form-group">
-                        <label class="form-label" for="resourceName">Название ресурса</label>
-                        <input type="text" class="form-input" id="resourceName" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label class="form-label" for="resourceUrl">URL ресурса</label>
-                        <input type="url" class="form-input" id="resourceUrl" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label class="form-label" for="resourceDescription">Описание</label>
-                        <textarea class="form-textarea" id="resourceDescription" required></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label class="form-label" for="resourceCategory">Категория</label>
-                        <select class="form-select" id="resourceCategory" required>
-                            <!-- Categories will be populated by JavaScript -->
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label class="form-label" for="resourceTags">Теги (через запятую)</label>
-                        <input type="text" class="form-input" id="resourceTags" placeholder="JavaScript, Веб-разработка, Фронтенд">
-                    </div>
-                    
-                    <div class="form-actions">
-                        <button type="button" class="btn btn-secondary" id="cancelBtn">Отмена</button>
-                        <button type="submit" class="btn btn-primary">Добавить ресурс</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
     <!-- Toast Notification -->
     <div class="toast" id="toast">
         <div class="toast-icon">
@@ -1405,7 +1406,7 @@
     </footer>
 
     <script>
-        // Расширенный список ресурсов (60+ ресурсов)
+        // Полный список из 70 ресурсов
         const resources = [
             {
                 id: 1,
@@ -1451,7 +1452,666 @@
                 featured: true,
                 rating: 4
             },
-            // ... (остальные ресурсы из предыдущего кода)
+            {
+                id: 5,
+                title: "CodePen",
+                description: "Онлайн-редактор для фронтенд-разработки с мгновенным предпросмотром.",
+                url: "https://codepen.io",
+                icon: "fas fa-pen",
+                category: "tools",
+                tags: ["песочница", "HTML", "CSS", "JavaScript", "фронтенд"],
+                rating: 4
+            },
+            {
+                id: 6,
+                title: "CSS-Tricks",
+                description: "Статьи, руководства и советы по современным техникам CSS и веб-разработки.",
+                url: "https://css-tricks.com",
+                icon: "fas fa-palette",
+                category: "reference",
+                tags: ["CSS", "дизайн", "статьи", "руководства"],
+                rating: 4
+            },
+            {
+                id: 7,
+                title: "Dev.to",
+                description: "Сообщество разработчиков, где делятся знаниями и опытом.",
+                url: "https://dev.to",
+                icon: "fas fa-users",
+                category: "community",
+                tags: ["блоги", "сообщество", "статьи", "обсуждения"],
+                rating: 4
+            },
+            {
+                id: 8,
+                title: "LeetCode",
+                description: "Платформа для подготовки к техническим собеседованиям через решение задач.",
+                url: "https://leetcode.com",
+                icon: "fas fa-brain",
+                category: "learning",
+                tags: ["алгоритмы", "интервью", "задачи", "подготовка"],
+                rating: 4
+            },
+            {
+                id: 9,
+                title: "Can I use",
+                description: "Совместимость веб-технологий в различных браузерах.",
+                url: "https://caniuse.com",
+                icon: "fas fa-check-circle",
+                category: "reference",
+                tags: ["браузеры", "совместимость", "веб", "поддержка"],
+                rating: 4
+            },
+            {
+                id: 10,
+                title: "Codewars",
+                description: "Улучшайте навыки программирования, решая задачи и изучая решения других.",
+                url: "https://www.codewars.com",
+                icon: "fas fa-code",
+                category: "learning",
+                tags: ["задачи", "практика", "алгоритмы", "рейтинг"],
+                rating: 4
+            },
+            {
+                id: 11,
+                title: "Figma",
+                description: "Инструмент для дизайна интерфейсов и прототипирования с совместной работой.",
+                url: "https://www.figma.com",
+                icon: "fas fa-paint-brush",
+                category: "tools",
+                tags: ["дизайн", "UI/UX", "прототипы", "коллаборация"],
+                rating: 4
+            },
+            {
+                id: 12,
+                title: "Habr",
+                description: "Крупнейший русскоязычный ресурс для IT-специалистов и разработчиков.",
+                url: "https://habr.com",
+                icon: "fas fa-newspaper",
+                category: "community",
+                tags: ["статьи", "новости", "IT", "сообщество"],
+                rating: 4
+            },
+            {
+                id: 13,
+                title: "W3Schools",
+                description: "Онлайн-учебник по веб-технологиям с интерактивными примерами.",
+                url: "https://www.w3schools.com",
+                icon: "fas fa-graduation-cap",
+                category: "learning",
+                tags: ["учебник", "HTML", "CSS", "JavaScript", "примеры"],
+                rating: 3
+            },
+            {
+                id: 14,
+                title: "Codecademy",
+                description: "Интерактивная платформа для обучения программированию.",
+                url: "https://www.codecademy.com",
+                icon: "fas fa-laptop",
+                category: "learning",
+                tags: ["курсы", "интерактив", "программирование", "обучение"],
+                rating: 4
+            },
+            {
+                id: 15,
+                title: "Udemy",
+                description: "Платформа с курсами по программированию и другим темам.",
+                url: "https://www.udemy.com",
+                icon: "fas fa-video",
+                category: "learning",
+                tags: ["курсы", "видео", "обучение", "разработка"],
+                rating: 4
+            },
+            {
+                id: 16,
+                title: "Coursera",
+                description: "Онлайн-курсы от ведущих университетов и компаний.",
+                url: "https://www.coursera.org",
+                icon: "fas fa-university",
+                category: "learning",
+                tags: ["курсы", "университеты", "сертификаты", "образование"],
+                rating: 4
+            },
+            {
+                id: 17,
+                title: "GitLab",
+                description: "Платформа для DevOps с возможностями CI/CD.",
+                url: "https://about.gitlab.com",
+                icon: "fab fa-gitlab",
+                category: "tools",
+                tags: ["Git", "CI/CD", "DevOps", "репозитории"],
+                rating: 4
+            },
+            {
+                id: 18,
+                title: "Bitbucket",
+                description: "Веб-сервис для хостинга проектов и совместной разработки.",
+                url: "https://bitbucket.org",
+                icon: "fab fa-bitbucket",
+                category: "tools",
+                tags: ["Git", "репозитории", "команда", "разработка"],
+                rating: 3
+            },
+            {
+                id: 19,
+                title: "Visual Studio Code",
+                description: "Бесплатный редактор кода с широкими возможностями расширения.",
+                url: "https://code.visualstudio.com",
+                icon: "fas fa-code",
+                category: "tools",
+                tags: ["редактор", "код", "расширения", "бесплатно"],
+                rating: 5
+            },
+            {
+                id: 20,
+                title: "Sublime Text",
+                description: "Быстрый и мощный текстовый редактор для кода.",
+                url: "https://www.sublimetext.com",
+                icon: "fas fa-file-code",
+                category: "tools",
+                tags: ["редактор", "код", "производительность", "плагины"],
+                rating: 4
+            },
+            {
+                id: 21,
+                title: "Atom",
+                description: "Хакерский текстовый редактор от GitHub.",
+                url: "https://atom.io",
+                icon: "fas fa-atom",
+                category: "tools",
+                tags: ["редактор", "код", "GitHub", "кастомизация"],
+                rating: 3
+            },
+            {
+                id: 22,
+                title: "Notion",
+                description: "Мощный инструмент для организации работы и ведения заметок.",
+                url: "https://www.notion.so",
+                icon: "fas fa-sticky-note",
+                category: "tools",
+                tags: ["организация", "заметки", "планирование", "проекты"],
+                rating: 4
+            },
+            {
+                id: 23,
+                title: "Trello",
+                description: "Визуальный инструмент для управления проектами и задачами.",
+                url: "https://trello.com",
+                icon: "fas fa-list-alt",
+                category: "tools",
+                tags: ["проекты", "задачи", "организация", "команда"],
+                rating: 4
+            },
+            {
+                id: 24,
+                title: "Slack",
+                description: "Популярный мессенджер для командной работы.",
+                url: "https://slack.com",
+                icon: "fab fa-slack",
+                category: "tools",
+                tags: ["коммуникация", "команда", "сообщения", "интеграции"],
+                rating: 4
+            },
+            {
+                id: 25,
+                title: "Discord",
+                description: "Платформа для общения с голосовыми каналами и сообществами.",
+                url: "https://discord.com",
+                icon: "fab fa-discord",
+                category: "community",
+                tags: ["общение", "сообщество", "голос", "каналы"],
+                rating: 4
+            },
+            {
+                id: 26,
+                title: "Reddit",
+                description: "Социальная платформа с сообществами по программированию.",
+                url: "https://www.reddit.com",
+                icon: "fab fa-reddit",
+                category: "community",
+                tags: ["сообщество", "обсуждения", "новости", "помощь"],
+                rating: 4
+            },
+            {
+                id: 27,
+                title: "Hacker News",
+                description: "Социальный новостной сайт о компьютерах и предпринимательстве.",
+                url: "https://news.ycombinator.com",
+                icon: "fas fa-newspaper",
+                category: "community",
+                tags: ["новости", "технологии", "стартапы", "IT"],
+                rating: 4
+            },
+            {
+                id: 28,
+                title: "Product Hunt",
+                description: "Платформа для открытия новых продуктов и технологий.",
+                url: "https://www.producthunt.com",
+                icon: "fas fa-rocket",
+                category: "community",
+                tags: ["продукты", "технологии", "инновации", "стартапы"],
+                rating: 4
+            },
+            {
+                id: 29,
+                title: "Dribbble",
+                description: "Сообщество дизайнеров для демонстрации работ и поиска вдохновения.",
+                url: "https://dribbble.com",
+                icon: "fas fa-basketball-ball",
+                category: "community",
+                tags: ["дизайн", "вдохновение", "портфолио", "UI/UX"],
+                rating: 4
+            },
+            {
+                id: 30,
+                title: "Behance",
+                description: "Платформа для демонстрации творческих работ и портфолио.",
+                url: "https://www.behance.net",
+                icon: "fab fa-behance",
+                category: "community",
+                tags: ["дизайн", "портфолио", "креатив", "вдохновение"],
+                rating: 4
+            },
+            {
+                id: 31,
+                title: "Laravel",
+                description: "PHP фреймворк для веб-приложений с элегантным синтаксисом.",
+                url: "https://laravel.com",
+                icon: "fab fa-laravel",
+                category: "frameworks",
+                tags: ["PHP", "фреймворк", "веб", "MVC"],
+                rating: 4
+            },
+            {
+                id: 32,
+                title: "React",
+                description: "JavaScript библиотека для создания пользовательских интерфейсов.",
+                url: "https://reactjs.org",
+                icon: "fab fa-react",
+                category: "frameworks",
+                tags: ["JavaScript", "UI", "компоненты", "фронтенд"],
+                rating: 5
+            },
+            {
+                id: 33,
+                title: "Vue.js",
+                description: "Прогрессивный фреймворк для создания пользовательских интерфейсов.",
+                url: "https://vuejs.org",
+                icon: "fab fa-vuejs",
+                category: "frameworks",
+                tags: ["JavaScript", "UI", "фреймворк", "фронтенд"],
+                rating: 4
+            },
+            {
+                id: 34,
+                title: "Angular",
+                description: "Платформа для построения мобильных и десктопных веб-приложений.",
+                url: "https://angular.io",
+                icon: "fab fa-angular",
+                category: "frameworks",
+                tags: ["JavaScript", "TypeScript", "фреймворк", "веб"],
+                rating: 4
+            },
+            {
+                id: 35,
+                title: "Django",
+                description: "Фреймворк для веб-приложений на Python, ориентированный на быстроту разработки.",
+                url: "https://www.djangoproject.com",
+                icon: "fas fa-leaf",
+                category: "frameworks",
+                tags: ["Python", "фреймворк", "веб", "MVT"],
+                rating: 4
+            },
+            {
+                id: 36,
+                title: "Flask",
+                description: "Микрофреймворк для веб-приложений на Python.",
+                url: "https://flask.palletsprojects.com",
+                icon: "fas fa-flask",
+                category: "frameworks",
+                tags: ["Python", "микрофреймворк", "веб", "легковесный"],
+                rating: 4
+            },
+            {
+                id: 37,
+                title: "Express.js",
+                description: "Минималистичный и гибкий фреймворк для веб-приложений Node.js.",
+                url: "https://expressjs.com",
+                icon: "fas fa-bolt",
+                category: "frameworks",
+                tags: ["JavaScript", "Node.js", "фреймворк", "веб"],
+                rating: 4
+            },
+            {
+                id: 38,
+                title: "Bootstrap",
+                description: "Популярный фреймворк для создания адаптивных и мобильных веб-сайтов.",
+                url: "https://getbootstrap.com",
+                icon: "fab fa-bootstrap",
+                category: "frameworks",
+                tags: ["CSS", "фреймворк", "адаптивность", "UI"],
+                rating: 4
+            },
+            {
+                id: 39,
+                title: "Tailwind CSS",
+                description: "CSS фреймворк для быстрой разработки пользовательских интерфейсов.",
+                url: "https://tailwindcss.com",
+                icon: "fas fa-wind",
+                category: "frameworks",
+                tags: ["CSS", "фреймворк", "утилиты", "UI"],
+                rating: 4
+            },
+            {
+                id: 40,
+                title: "Sass",
+                description: "Препроцессор CSS, расширяющий возможности стандартного CSS.",
+                url: "https://sass-lang.com",
+                icon: "fab fa-sass",
+                category: "tools",
+                tags: ["CSS", "препроцессор", "стили", "разработка"],
+                rating: 4
+            },
+            {
+                id: 41,
+                title: "Less",
+                description: "Препроцессор CSS, обеспечивающий динамическое поведение стилей.",
+                url: "http://lesscss.org",
+                icon: "fas fa-less",
+                category: "tools",
+                tags: ["CSS", "препроцессор", "стили", "разработка"],
+                rating: 3
+            },
+            {
+                id: 42,
+                title: "Webpack",
+                description: "Сборщик модулей для современных JavaScript приложений.",
+                url: "https://webpack.js.org",
+                icon: "fas fa-cube",
+                category: "tools",
+                tags: ["JavaScript", "сборка", "модули", "оптимизация"],
+                rating: 4
+            },
+            {
+                id: 43,
+                title: "Babel",
+                description: "Транспайлер JavaScript для совместимости с старыми браузерами.",
+                url: "https://babeljs.io",
+                icon: "fas fa-exchange-alt",
+                category: "tools",
+                tags: ["JavaScript", "транспиляция", "совместимость", "ES6"],
+                rating: 4
+            },
+            {
+                id: 44,
+                title: "ESLint",
+                description: "Инструмент для идентификации и исправления проблем в JavaScript коде.",
+                url: "https://eslint.org",
+                icon: "fas fa-check-double",
+                category: "tools",
+                tags: ["JavaScript", "линтер", "качество кода", "стиль"],
+                rating: 4
+            },
+            {
+                id: 45,
+                title: "Prettier",
+                description: "Инструмент для автоматического форматирования кода.",
+                url: "https://prettier.io",
+                icon: "fas fa-code",
+                category: "tools",
+                tags: ["форматирование", "код", "стиль", "автоматизация"],
+                rating: 4
+            },
+            {
+                id: 46,
+                title: "Jest",
+                description: "Фреймворк для тестирования JavaScript с акцентом на простоту.",
+                url: "https://jestjs.io",
+                icon: "fas fa-vial",
+                category: "tools",
+                tags: ["JavaScript", "тестирование", "unit-тесты", "фреймворк"],
+                rating: 4
+            },
+            {
+                id: 47,
+                title: "Cypress",
+                description: "Инструмент для end-to-end тестирования веб-приложений.",
+                url: "https://www.cypress.io",
+                icon: "fas fa-robot",
+                category: "tools",
+                tags: ["тестирование", "e2e", "веб", "автоматизация"],
+                rating: 4
+            },
+            {
+                id: 48,
+                title: "Docker",
+                description: "Платформа для разработки, доставки и запуска приложений в контейнерах.",
+                url: "https://www.docker.com",
+                icon: "fab fa-docker",
+                category: "tools",
+                tags: ["контейнеры", "развертывание", "DevOps", "инфраструктура"],
+                rating: 5
+            },
+            {
+                id: 49,
+                title: "Kubernetes",
+                description: "Система оркестрации контейнеризованных приложений.",
+                url: "https://kubernetes.io",
+                icon: "fas fa-ship",
+                category: "tools",
+                tags: ["оркестрация", "контейнеры", "масштабирование", "DevOps"],
+                rating: 4
+            },
+            {
+                id: 50,
+                title: "AWS",
+                description: "Облачная платформа от Amazon с широким спектром услуг.",
+                url: "https://aws.amazon.com",
+                icon: "fab fa-aws",
+                category: "tools",
+                tags: ["облако", "инфраструктура", "хостинг", "сервисы"],
+                rating: 5
+            },
+            {
+                id: 51,
+                title: "Google Cloud",
+                description: "Облачная платформа от Google с услугами для разработчиков.",
+                url: "https://cloud.google.com",
+                icon: "fab fa-google",
+                category: "tools",
+                tags: ["облако", "инфраструктура", "хостинг", "сервисы"],
+                rating: 4
+            },
+            {
+                id: 52,
+                title: "Microsoft Azure",
+                description: "Облачная платформа от Microsoft для разработки и развертывания приложений.",
+                url: "https://azure.microsoft.com",
+                icon: "fas fa-cloud",
+                category: "tools",
+                tags: ["облако", "инфраструктура", "хостинг", "сервисы"],
+                rating: 4
+            },
+            {
+                id: 53,
+                title: "Firebase",
+                description: "Платформа для разработки мобильных и веб-приложений от Google.",
+                url: "https://firebase.google.com",
+                icon: "fas fa-fire",
+                category: "tools",
+                tags: ["база данных", "хостинг", "аутентификация", "мобильные"],
+                rating: 4
+            },
+            {
+                id: 54,
+                title: "MongoDB",
+                description: "Документоориентированная система управления базами данных.",
+                url: "https://www.mongodb.com",
+                icon: "fas fa-database",
+                category: "tools",
+                tags: ["база данных", "NoSQL", "документы", "масштабирование"],
+                rating: 4
+            },
+            {
+                id: 55,
+                title: "PostgreSQL",
+                description: "Мощная объектно-реляционная система управления базами данных.",
+                url: "https://www.postgresql.org",
+                icon: "fas fa-database",
+                category: "tools",
+                tags: ["база данных", "SQL", "реляционная", "производительность"],
+                rating: 5
+            },
+            {
+                id: 56,
+                title: "MySQL",
+                description: "Одна из самых популярных систем управления реляционными базами данных.",
+                url: "https://www.mysql.com",
+                icon: "fas fa-database",
+                category: "tools",
+                tags: ["база данных", "SQL", "реляционная", "open source"],
+                rating: 4
+            },
+            {
+                id: 57,
+                title: "Redis",
+                description: "Хранилище структур данных в памяти, используемое как база данных, кэш и брокер сообщений.",
+                url: "https://redis.io",
+                icon: "fas fa-memory",
+                category: "tools",
+                tags: ["база данных", "кэш", "память", "ключ-значение"],
+                rating: 4
+            },
+            {
+                id: 58,
+                title: "GraphQL",
+                description: "Язык запросов для API и среда выполнения для их выполнения с существующими данными.",
+                url: "https://graphql.org",
+                icon: "fas fa-project-diagram",
+                category: "tools",
+                tags: ["API", "запросы", "данные", "типизация"],
+                rating: 4
+            },
+            {
+                id: 59,
+                title: "REST API",
+                description: "Архитектурный стиль для разработки веб-служб.",
+                url: "https://restfulapi.net",
+                icon: "fas fa-network-wired",
+                category: "reference",
+                tags: ["API", "архитектура", "веб-службы", "HTTP"],
+                rating: 4
+            },
+            {
+                id: 60,
+                title: "Postman",
+                description: "Платформа для разработки и тестирования API.",
+                url: "https://www.postman.com",
+                icon: "fas fa-paper-plane",
+                category: "tools",
+                tags: ["API", "тестирование", "разработка", "документация"],
+                rating: 4
+            },
+            {
+                id: 61,
+                title: "Jira",
+                description: "Инструмент для управления проектами и отслеживания задач.",
+                url: "https://www.atlassian.com/software/jira",
+                icon: "fab fa-jira",
+                category: "tools",
+                tags: ["проекты", "задачи", "управление", "команда"],
+                rating: 4
+            },
+            {
+                id: 62,
+                title: "Confluence",
+                description: "Платформа для совместной работы и ведения документации.",
+                url: "https://www.atlassian.com/software/confluence",
+                icon: "fas fa-file-alt",
+                category: "tools",
+                tags: ["документация", "сотрудничество", "вики", "команда"],
+                rating: 4
+            },
+            {
+                id: 63,
+                title: "Asana",
+                description: "Инструмент для управления задачами и проектами.",
+                url: "https://asana.com",
+                icon: "fas fa-tasks",
+                category: "tools",
+                tags: ["проекты", "задачи", "организация", "команда"],
+                rating: 4
+            },
+            {
+                id: 64,
+                title: "WebStorm",
+                description: "IDE для JavaScript и веб-разработки от JetBrains.",
+                url: "https://www.jetbrains.com/webstorm/",
+                icon: "fas fa-code",
+                category: "tools",
+                tags: ["IDE", "JavaScript", "веб", "редактор"],
+                rating: 5
+            },
+            {
+                id: 65,
+                title: "PyCharm",
+                description: "IDE для Python разработки от JetBrains.",
+                url: "https://www.jetbrains.com/pycharm/",
+                icon: "fab fa-python",
+                category: "tools",
+                tags: ["IDE", "Python", "разработка", "редактор"],
+                rating: 5
+            },
+            {
+                id: 66,
+                title: "IntelliJ IDEA",
+                description: "IDE для Java разработки от JetBrains.",
+                url: "https://www.jetbrains.com/idea/",
+                icon: "fab fa-java",
+                category: "tools",
+                tags: ["IDE", "Java", "разработка", "редактор"],
+                rating: 5
+            },
+            {
+                id: 67,
+                title: "PHPStorm",
+                description: "IDE для PHP разработки от JetBrains.",
+                url: "https://www.jetbrains.com/phpstorm/",
+                icon: "fab fa-php",
+                category: "tools",
+                tags: ["IDE", "PHP", "разработка", "редактор"],
+                rating: 5
+            },
+            {
+                id: 68,
+                title: "RubyMine",
+                description: "IDE для Ruby и Rails разработки от JetBrains.",
+                url: "https://www.jetbrains.com/ruby/",
+                icon: "fas fa-gem",
+                category: "tools",
+                tags: ["IDE", "Ruby", "Rails", "редактор"],
+                rating: 4
+            },
+            {
+                id: 69,
+                title: "GoLand",
+                description: "IDE для Go разработки от JetBrains.",
+                url: "https://www.jetbrains.com/go/",
+                icon: "fas fa-code",
+                category: "tools",
+                tags: ["IDE", "Go", "разработка", "редактор"],
+                rating: 4
+            },
+            {
+                id: 70,
+                title: "Rider",
+                description: "IDE для .NET разработки от JetBrains.",
+                url: "https://www.jetbrains.com/rider/",
+                icon: "fas fa-code",
+                category: "tools",
+                tags: ["IDE", ".NET", "C#", "редактор"],
+                rating: 4
+            }
         ];
 
         // Категории
@@ -1645,7 +2305,7 @@
                 button.innerHTML = `
                     <i class="${category.icon}"></i>
                     <span>${category.name}</span>
-                    <span style="margin-left: auto; font-size: 0.8rem; opacity: 0.7;">${category.count}</span>
+                    <span style="margin-left: auto; font-size: 0.9rem; opacity: 0.7;">${category.count}</span>
                 `;
                 button.dataset.category = category.id;
                 
@@ -1705,11 +2365,11 @@
             topRatedResources.forEach(resource => {
                 const resourceElement = document.createElement('div');
                 resourceElement.className = 'resource-card';
-                resourceElement.style.marginBottom = '1rem';
-                resourceElement.style.padding = '1rem';
+                resourceElement.style.marginBottom = '1.5rem';
+                resourceElement.style.padding = '1.5rem';
                 
                 resourceElement.innerHTML = `
-                    <div class="resource-title" style="font-size: 1rem; margin-bottom: 0.5rem;">
+                    <div class="resource-title" style="font-size: 1.2rem; margin-bottom: 0.75rem;">
                         <i class="${resource.icon}"></i>
                         ${resource.title}
                     </div>
@@ -1830,7 +2490,7 @@
             if (resourcesToRender.length === 0) {
                 resourcesContainer.innerHTML = `
                     <div class="no-results">
-                        <i class="fas fa-search fa-3x" style="margin-bottom: 1rem;"></i>
+                        <i class="fas fa-search"></i>
                         <h3>Ресурсы не найдены</h3>
                         <p>Попробуйте изменить поисковый запрос или выбрать другую категорию</p>
                     </div>
@@ -2051,29 +2711,38 @@
             // Создаем простое контекстное меню
             const menu = document.createElement('div');
             menu.style.position = 'absolute';
-            menu.style.top = '60px';
-            menu.style.right = '10px';
+            menu.style.top = '70px';
+            menu.style.right = '20px';
             menu.style.background = 'var(--dark-light)';
             menu.style.border = '1px solid rgba(255, 255, 255, 0.1)';
             menu.style.borderRadius = 'var(--border-radius)';
-            menu.style.padding = '0.5rem';
+            menu.style.padding = '0.75rem';
             menu.style.zIndex = '1000';
             menu.style.boxShadow = 'var(--shadow)';
             menu.style.backdropFilter = 'blur(10px)';
+            menu.style.minWidth = '200px';
             
             menu.innerHTML = `
-                <div style="padding: 0.5rem 1rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+                <div style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); font-weight: 600;">
                     ${currentState.currentUser.username}
                 </div>
-                <button id="logoutBtn" style="width: 100%; padding: 0.5rem 1rem; background: transparent; border: none; color: var(--light); text-align: left; cursor: pointer; border-radius: var(--border-radius);">
-                    Выйти
+                <button id="logoutBtn" style="width: 100%; padding: 0.75rem 1rem; background: transparent; border: none; color: var(--light); text-align: left; cursor: pointer; border-radius: var(--border-radius); transition: var(--transition);">
+                    <i class="fas fa-sign-out-alt" style="margin-right: 0.5rem;"></i> Выйти
                 </button>
             `;
             
             document.body.appendChild(menu);
             
             // Обработчик для кнопки выхода
-            document.getElementById('logoutBtn').addEventListener('click', () => {
+            const logoutBtn = document.getElementById('logoutBtn');
+            logoutBtn.addEventListener('mouseenter', () => {
+                logoutBtn.style.background = 'rgba(255, 255, 255, 0.1)';
+            });
+            logoutBtn.addEventListener('mouseleave', () => {
+                logoutBtn.style.background = 'transparent';
+            });
+            
+            logoutBtn.addEventListener('click', () => {
                 currentState.currentUser = null;
                 localStorage.removeItem('devhubUser');
                 updateUserInterface();
@@ -2126,9 +2795,9 @@
             
             if (currentState.chatMessages.length === 0) {
                 chatMessages.innerHTML = `
-                    <div style="text-align: center; color: var(--gray); padding: 2rem;">
-                        <i class="fas fa-comments fa-2x" style="margin-bottom: 1rem;"></i>
-                        <p>Чат пуст. Будьте первым, кто оставит сообщение!</p>
+                    <div style="text-align: center; color: var(--gray); padding: 3rem;">
+                        <i class="fas fa-comments fa-3x" style="margin-bottom: 1.5rem; opacity: 0.5;"></i>
+                        <p style="font-size: 1.1rem;">Чат пуст. Будьте первым, кто оставит сообщение!</p>
                     </div>
                 `;
                 return;
